@@ -5,7 +5,7 @@ import star from "../../Images/StoreItems/star.png";
 import halfStar from "../../Images/StoreItems/star-half-filled.png";
 import emptyStar from "../../Images/StoreItems/empty-star.png";
 
-const StoreItem = ({onSale,sale, isNew, image, title, price, rate, totalRates}) => {
+const StoreItem = ({onSaleTop, onSaleBot,sale, isNew, image, title, price, rate, totalRates}) => {
     const [hidden, setHidden] = React.useState("hidden");
     const addToCartShow = () =>{
         setHidden("");
@@ -39,7 +39,7 @@ const StoreItem = ({onSale,sale, isNew, image, title, price, rate, totalRates}) 
             >
                 <div className={'relative flex flex-row justify-between'}>
                     <div className={"flex items-start"}>
-                        {onSale && <div
+                        {onSaleTop && <div
                             className={"bg-red-500 text-white text-center w-[55px] h-[26px] rounded-sm"}>-{sale}%</div>}
                         {isNew && <div
                             className={"bg-green-500 text-white text-center w-[55px] h-[26px] rounded-sm"}>-{sale}%</div>}
@@ -58,7 +58,7 @@ const StoreItem = ({onSale,sale, isNew, image, title, price, rate, totalRates}) 
             </div>
             <div className={"flex flex-col gap-2"}>
                 <p>{title}</p>
-                {onSale &&
+                {onSaleBot &&
                     <div className={"flex flex-row gap-1"}>
                         <p className={"text-red-500"}>${price-price*(sale/100)}</p>
                         <p className={"text-gray-600 line-through"}>${price}</p>

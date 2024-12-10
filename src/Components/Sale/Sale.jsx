@@ -42,7 +42,7 @@ const Sale = ({deadline, title, sellingCollection, settings}) => {
                         modules={[Pagination, Navigation]}>
                     {sellingCollection.map((item, index) => (
                         <SwiperSlide key={index}>
-                            <StoreItem key={item.title + index} onSale={true} sale={item.sale} isNew={false}
+                            <StoreItem key={item.title + index} onSaleTop={true} onSaleBot={true} sale={item.sale} isNew={false}
                                        image={item.image} price={item.price} title={item.title} rate={item.rate}
                                        totalRates={item.totalRates}/>
                         </SwiperSlide>
