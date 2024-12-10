@@ -8,7 +8,7 @@ import leftArrow from "../../Images/Icons/Fill With Left Arrow.png";
 import rightArrow from "../../Images/Icons/Fill with Right Arrow.png";
 const BrowseByCategory = ({categories}) => {
     return (
-        <div className={"flex flex-col mt-5 w-[80%]  border-b border-b-neutral-300 pb-12 mb-1"}>
+        <div className={"flex flex-col mt-5 w-[79%]  border-b border-b-neutral-300 pb-12 mb-1"}>
             <div className={"flex flex-row justify-between w-[88%] mb-16"}>
                 <OnPageTitle title={"Categories"}/>
                 <div>
@@ -29,11 +29,10 @@ const BrowseByCategory = ({categories}) => {
                     "--swiper-pagination-bullet-horizontal-gap": "6px",
                     paddingRight:"4em"
                 }}
-                        slidesPerView={5}
+                        slidesPerView={7}
                         spaceBetween={0}
                         observer={true}
                         observeParents={true}
-                        loop={true}
                         navigation={{nextEl:".arrow-right-category", prevEl:".arrow-left-category"}}
                         modules={[Pagination, Navigation]}>
                     {categories.map((item, index) => (
