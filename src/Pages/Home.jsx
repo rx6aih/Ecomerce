@@ -8,9 +8,14 @@ import categoryPhone from "../Images/HomePage/BrowseByCategory/Category-Phone.pn
 import BrowseByCategory from "../Components/BrowseByCategory/BrowseByCategory.jsx";
 import shirt from "../Images/StoreItems/jacket.png";
 import BestSelling from "../Components/BestSelling/BestSelling.jsx";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchProducts} from "../Store/ProductReducer.js";
 
 const Home = () => {
-    const test = () => console.log('test');
+    const dispatch = useDispatch();
+    const saleItems = useSelector(state => state.product.items)
+    dispatch(fetchProducts());
+    const test = () => console.log("test")
     const multipleButtons = [
         {title:"Woman’s Fashion", singles:[{title:"single",onClick: test},{title:"single1",onClick:test},{title:"single2",onClick:test}]},
         {title:"Men’s Fashion", singles:[{title:"single3",onClick: test},{title:"single4",onClick:test},{title:"single5",onClick:test}]},
@@ -22,14 +27,7 @@ const Home = () => {
         {image: iphone, link:"#"},{image: iphone, link:"#"},{image: iphone, link:"#"},
     ])
 
-    const [saleItems, setSaleItems] = useState([
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 4.5, totalRates:100},
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 3.5, totalRates:100},
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 5, totalRates:100},
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 5, totalRates:100},
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 5, totalRates:100},
-        {sale: 40, image:gamepad, title:"HAVIT HV-G92 Gamepad", price: 200, rate: 5, totalRates:100},
-    ]);
+
     const [squareCategoryCollection, setSquareCategoryCollection] = React.useState([
         {image: categoryPhone, link:"#"},
         {image: categoryPhone, link:"#"},

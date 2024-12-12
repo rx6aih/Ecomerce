@@ -4,19 +4,23 @@ import {BrowserRouter} from "react-router-dom";
 import {AuthContext} from "./Context/index.js";
 import AppRouter from "./Routing/AppRouter.jsx";
 import {NextUIProvider} from "@nextui-org/react";
-
+import {Provider} from "react-redux";
+import {store} from "./Store/store.jsx"
 function App() {
     const [isAuthorized, setIsAuthorized] = useState(true);
+
   return (
-    <NextUIProvider>
-      <AuthContext.Provider value={{ isAuthorized, setIsAuthorized }}>
-        <BrowserRouter>
-          <Navbar isSale={true} saleTitle={"Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!\n" +
-              "ShopNow"}/>
-            <AppRouter/>
-        </BrowserRouter>
-      </AuthContext.Provider>
-    </NextUIProvider>
+      <Provider store={store}>
+        <NextUIProvider>
+          <AuthContext.Provider value={{ isAuthorized, setIsAuthorized }}>
+            <BrowserRouter>
+              <Navbar isSale={true} saleTitle={"Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!\n" +
+                  "ShopNow"}/>
+                <AppRouter/>
+            </BrowserRouter>
+          </AuthContext.Provider>
+        </NextUIProvider>
+      </Provider>
   )
 }
 
