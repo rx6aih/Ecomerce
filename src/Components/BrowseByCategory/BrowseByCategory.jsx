@@ -8,8 +8,8 @@ import leftArrow from "../../Images/Icons/Fill With Left Arrow.png";
 import rightArrow from "../../Images/Icons/Fill with Right Arrow.png";
 const BrowseByCategory = ({categories}) => {
     return (
-        <div className={"flex flex-col mt-5 w-[79%]  border-b border-b-neutral-300 pb-12 mb-1"}>
-            <div className={"flex flex-row justify-between w-[88%] mb-16"}>
+        <div className={"flex flex-col mt-5 w-[107%]  border-b border-b-neutral-300 pb-12 mb-1"}>
+            <div className={"flex flex-row justify-between w-[87%] mb-16"}>
                 <OnPageTitle title={"Categories"}/>
                 <div>
                     <button className={"arrow-left-category"}>

@@ -13,7 +13,7 @@ const Categories = ({singles, multiple}) => {
         setAnchorElBtn(null);
     }
     return (
-        <div className={"flex flex-col gap-1  border-zinc-300 border-solid border-r-2 w-[16%] max-h-[404px] overflow-scroll"}>
+        <div className={"flex flex-col gap-1  border-zinc-300 border-solid border-r-2 w-[18%] max-h-[404px] overflow-scroll"}>
             <Accordion selectionMode="multiple" >
             {
                 multiple.map((item,index) =>

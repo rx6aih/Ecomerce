@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-const Timer = ({deadline}) => {
+const Timer = ({deadline, type}) => {
     const [days, setDays] = React.useState(0);
     const [hours, setHours] = React.useState(0);
     const [minutes, setMinutes] = React.useState(0);
@@ -21,6 +21,7 @@ const Timer = ({deadline}) => {
         return () => clearInterval(interval);
     },[])
     return (
+        type==="dots" ?
         <div className={"flex flex-row gap-3 items-end"}>
             <div className={"flex flex-col gap-1"}>
                 <p className={"text-sm font-medium"}>Days</p>
@@ -45,6 +46,25 @@ const Timer = ({deadline}) => {
                 <h1 className={"text-4xl font-bold"}>{seconds}</h1>
             </div>
         </div>
+            :
+            <div className={"flex flex-row gap-3"}>
+                <div className={"flex flex-col text-xs/3 p-6 w-14 h-14 justify-center items-center bg-white rounded-full"}>
+                    <p className={"font-bold"}>{days}</p>
+                    <p>Days</p>
+                </div>
+                <div className={"flex flex-col text-xs/3 p-6 w-14 h-14 justify-center items-center bg-white rounded-full"}>
+                    <p className={"font-bold"}>{hours}</p>
+                    <p>Hours</p>
+                </div>
+                <div className={"flex flex-col text-xs/3 p-6 w-14 h-14 justify-center items-center bg-white rounded-full"}>
+                    <p className={"font-bold"}>{minutes}</p>
+                    <p>Minutes</p>
+                </div>
+                <div className={"flex flex-col text-xs/3 p-6 w-14 h-14 justify-center items-center bg-white rounded-full"}>
+                    <p className={"font-bold"}>{seconds}</p>
+                    <p >Seconds</p>
+                </div>
+            </div>
     );
 };
 

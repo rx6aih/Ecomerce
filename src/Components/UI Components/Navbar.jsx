@@ -12,7 +12,7 @@ const Navbar = ({isSale, saleTitle}) => {
         <Box className={"border-b-2 border-solid border-zinc-300 pb-2"}>
             {isSale&&
             <div className={"w-[100%] bg-black text-white h-10 flex text-center items-center justify-center"}>{saleTitle}</div>}
-            <Box  className={"ml-48 w-[73%] pt-4"}>
+            <Box  className={"ml-48 w-[78%] pt-4"}>
                 <AppBar position="static" sx={{boxShadow:"none"}}>
                     <Toolbar className={"bg-white"} sx={{flexGrow: 1,boxShadow:"",justifyItems:"space-between"}}>
                         <div className={"w-40 flex items-start"}>

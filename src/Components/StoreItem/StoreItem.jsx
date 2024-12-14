@@ -42,7 +42,7 @@ const StoreItem = ({onSaleTop, onSaleBot,sale, isNew, image, title, price, rate,
                         {onSaleTop && <div
                             className={"bg-red-500 text-white text-center w-[55px] h-[26px] rounded-sm"}>-{sale}%</div>}
                         {isNew && <div
-                            className={"bg-green-500 text-white text-center w-[55px] h-[26px] rounded-sm"}>-{sale}%</div>}
+                            className={"bg-green-500 text-white text-center w-[55px] h-[26px] rounded-sm"}>New</div>}
                     </div>
                     <img src={image} alt={title} className={"absolute left-6 top-4 max-w-[190px] h-[180px]"}/>
                     <div className={"flex flex-col items-end"}>
@@ -58,10 +58,13 @@ const StoreItem = ({onSaleTop, onSaleBot,sale, isNew, image, title, price, rate,
             </div>
             <div className={"flex flex-col gap-2"}>
                 <p>{title}</p>
-                {onSaleBot &&
+                {onSaleBot ?
                     <div className={"flex flex-row gap-1"}>
-                        <p className={"text-red-500"}>${price-price*(sale/100)}</p>
+                        <p className={"text-red-500"}>${price - price * (sale / 100)}</p>
                         <p className={"text-gray-600 line-through"}>${price}</p>
+                    </div>
+                    : <div className={"flex flex-row gap-1"}>
+                        <p className={"text-red-500"}>${price}</p>
                     </div>}
                 <div className={"flex flex-row gap-1"}>
                     {stars.full.map(fullStar =>

@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 const HomeTopSwiper = ({images}) => {
     return (
-        <div className={"2xl:min-w-[882px] xl:w-[750px] lg:w-[550px] md:w-[500px] flex h-fit m-8"}>
+        <div className={"2xl:min-w-[992px] xl:w-[750px] lg:w-[550px] md:w-[500px] flex h-fit m-8"}>
             <Swiper className={"2xl:w-[892px]"} style={{
                 "--swiper-pagination-color": "#972bcf",
                 "--swiper-pagination-bullet-inactive-color": "#999999",
@@ -21,7 +21,7 @@ const HomeTopSwiper = ({images}) => {
                 modules={[Pagination]}>
                 {images.map((image, index) => (
                     <SwiperSlide key={index}>
-                        <img src={image.image} alt={image.title} />
+                        <img src={image.image} className={"w-[992px] h-[376px] pb-1"} alt={image.title} />
                     </SwiperSlide>
                 ))}
             </Swiper>
