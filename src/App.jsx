@@ -6,6 +6,7 @@ import AppRouter from "./Routing/AppRouter.jsx";
 import {NextUIProvider} from "@nextui-org/react";
 import {Provider} from "react-redux";
 import {store} from "./Store/store.jsx"
+import Footer from "./Components/UI Components/Footer.jsx";
 function App() {
     const [isAuthorized, setIsAuthorized] = useState(true);
 
@@ -14,9 +15,9 @@ function App() {
         <NextUIProvider>
           <AuthContext.Provider value={{ isAuthorized, setIsAuthorized }}>
             <BrowserRouter>
-              <Navbar isSale={true} saleTitle={"Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!\n" +
-                  "ShopNow"}/>
+                <Navbar isSale={true} saleTitle={"Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! ShopNow"}/>
                 <AppRouter/>
+                <Footer/>
             </BrowserRouter>
           </AuthContext.Provider>
         </NextUIProvider>
