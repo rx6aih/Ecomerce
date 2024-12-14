@@ -9,7 +9,7 @@ const Navbar = ({isSale, saleTitle}) => {
     const pages = ["Home", "Contact", "About", "Sign Up"];
 
     return (
-        <Box className={"border-b-2 border-solid border-zinc-300 pb-2"}>
+        <Box className={"border-b-2 border-solid border-zinc-300 pb-2"} id={"navbar"}>
             {isSale&&
             <div className={"w-[100%] bg-black text-white h-10 flex text-center items-center justify-center"}>{saleTitle}</div>}
             <Box  className={"ml-48 w-[78%] pt-4"}>

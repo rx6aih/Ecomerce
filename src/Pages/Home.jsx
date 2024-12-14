@@ -13,6 +13,7 @@ import ProductCollection from "../Components/ProductCollection/ProductCollection
 import ProductPoster from "../Components/UI Components/ProductPoster.jsx";
 import ps5 from "../Images/Posters/ps5-Poster.png"
 import Posters from "../Components/Posters/Posters.jsx";
+import TagList from "../Components/TagList/TagList.jsx";
 
 
 const Home = () => {
@@ -81,9 +82,8 @@ const Home = () => {
             <ProductCollection titleTop={"This Month"} titleBot={"Best Selling Products"} isTopButton={true} collection={bestSellingItems} isSale={false}/>
             <BigCategory title={"Enhance Your Music Experience"} deadline={"December, 31, 2024"} link={"#"} image={speakerImg}/>
             <ProductCollection titleTop={"Our Products"} titleBot={"Explore Our Products"} isArrows={true} isBotButton={true} arrowLeft={"our_arrow_left"} arrowRight={"our_arrow_right"} collection={ourCollection} isSale={false}/>
-            <div>
-                <Posters titleTop={"Featured"} titleBot={"New Arrival"} first={posters[0]} second={posters[1]} third={posters[2]} fourth={posters[3]}/>
-            </div>
+            <Posters titleTop={"Featured"} titleBot={"New Arrival"} first={posters[0]} second={posters[1]} third={posters[2]} fourth={posters[3]}/>
+            <TagList/>
         </div>
     );
 };
