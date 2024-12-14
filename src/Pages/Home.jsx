@@ -2,7 +2,6 @@ import React, {useEffect, useMemo, useState} from 'react';
 import Categories from "../Components/Categories/Categories.jsx";
 import iphone from '/src/Images/HomePage/Frame 560.png'
 import HomeTopSwiper from "../Components/UI Components/Swiper/HomeTopSwiper.jsx";
-import gamepad from '/src/Images/StoreItems/Gamepad.png'
 import categoryPhone from "../Images/HomePage/BrowseByCategory/Category-Phone.png";
 import BrowseByCategory from "../Components/BrowseByCategory/BrowseByCategory.jsx";
 import shirt from "../Images/StoreItems/jacket.png";
@@ -11,6 +10,10 @@ import {fetchProducts} from "../Store/ProductReducer.js";
 import BigCategory from "../Components/BigCategory/BigCategory.jsx";
 import speakerImg from '../Images/BigStore/speaker.png';
 import ProductCollection from "../Components/ProductCollection/ProductCollection.jsx";
+import ProductPoster from "../Components/UI Components/ProductPoster.jsx";
+import ps5 from "../Images/Posters/ps5-Poster.png"
+import Posters from "../Components/Posters/Posters.jsx";
+
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -60,6 +63,13 @@ const Home = () => {
         {image:shirt, title:"HAVIT HV-G92 Gamepad", price: 250, rate: 5, totalRates:100, isNew:true},
     ]);
 
+    const posters = [
+        {image: ps5, title:"PlayStation 5", description:"Black and White version of the PS5 coming out on sale."},
+        {image: ps5, title:"Women’s Collections", description:"Featured woman collections that give you another vibe."},
+        {image: ps5, title:"Speakers", description:"Amazon wireless speakers"},
+        {image: ps5, title:"Perfume", description:"GUCCI INTENSE OUD EDP"},
+    ]
+
     return (
         <div className={"flex flex-col w-[80%] ml-[12%]"}>
             <div className={"flex flex-row"}>
@@ -71,6 +81,9 @@ const Home = () => {
             <ProductCollection titleTop={"This Month"} titleBot={"Best Selling Products"} isTopButton={true} collection={bestSellingItems} isSale={false}/>
             <BigCategory title={"Enhance Your Music Experience"} deadline={"December, 31, 2024"} link={"#"} image={speakerImg}/>
             <ProductCollection titleTop={"Our Products"} titleBot={"Explore Our Products"} isArrows={true} isBotButton={true} arrowLeft={"our_arrow_left"} arrowRight={"our_arrow_right"} collection={ourCollection} isSale={false}/>
+            <div>
+                <Posters titleTop={"Featured"} titleBot={"New Arrival"} first={posters[0]} second={posters[1]} third={posters[2]} fourth={posters[3]}/>
+            </div>
         </div>
     );
 };
