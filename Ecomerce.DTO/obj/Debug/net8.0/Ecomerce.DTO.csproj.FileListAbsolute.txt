@@ -1,0 +1,11 @@
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/bin/Debug/net8.0/Ecomerce.DTO.deps.json
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/bin/Debug/net8.0/Ecomerce.DTO.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/bin/Debug/net8.0/Ecomerce.DTO.pdb
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.GeneratedMSBuildEditorConfig.editorconfig
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.AssemblyInfoInputs.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.AssemblyInfo.cs
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.csproj.CoreCompileInputs.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/refint/Ecomerce.DTO.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/Ecomerce.DTO.pdb
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DTO/obj/Debug/net8.0/ref/Ecomerce.DTO.dll

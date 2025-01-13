@@ -1,0 +1,14 @@
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/bin/Debug/net8.0/Ecomerce.DAL.deps.json
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/bin/Debug/net8.0/Ecomerce.DAL.runtimeconfig.json
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/bin/Debug/net8.0/Ecomerce.DAL.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/bin/Debug/net8.0/Ecomerce.DAL.pdb
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.csproj.AssemblyReference.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.AssemblyInfoInputs.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.AssemblyInfo.cs
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.csproj.CoreCompileInputs.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/refint/Ecomerce.DAL.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.pdb
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.genruntimeconfig.cache
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/ref/Ecomerce.DAL.dll
