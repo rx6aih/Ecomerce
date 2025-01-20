@@ -1,6 +1,9 @@
 using System.Text;
+using Ecomerce.BL.Authentication;
 using Ecomerce.BL.Utility.Jwt;
+using Ecomerce.DAL.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -32,12 +35,16 @@ public static class ApiExtensions
                     }
                 };
             });
+        services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
         services.AddAuthorization(options =>
         {
-            options.AddPolicy("AdminPolicy", policy =>
-            {
-                policy.RequireClaim("Admin", "true");
-            });
+            Permission[] adminPermissions = [Ecomerce.DAL.Enums.Permission.Create];
+            options.AddPolicy("Admin", policy => policy.AddRequirements(new PermissionRequirement(adminPermissions)));
         });
+    }
+    public static IEndpointConventionBuilder RequirePermissions<TBuilder>
+        (this TBuilder builder, params Permission[] permissions) where TBuilder : IEndpointConventionBuilder
+    {
+        return builder.RequireAuthorization(policy => policy.AddRequirements(new PermissionRequirement(permissions)));
     }
 }

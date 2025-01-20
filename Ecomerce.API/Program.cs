@@ -1,16 +1,19 @@
 using Ecomerce.API.Controllers;
 using Ecomerce.API.Extensions;
 using Ecomerce.BL;
+using Ecomerce.BL.Authentication;
 using Ecomerce.BL.Implementations;
 using Ecomerce.BL.Utility.Jwt;
 using Ecomerce.DAL;
 using Ecomerce.DAL.Context;
+using Ecomerce.DAL.Enums;
 using Ecomerce.DAL.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(JwtOptions)));
+builder.Services.Configure<AuthorizationOptions>(builder.Configuration.GetSection(nameof(AuthorizationOptions)));
 
 builder.Services.AddApiAuthentication(builder.Configuration);
 builder.Services.AddBl();
@@ -39,14 +42,16 @@ dbContext.Database.EnsureCreated();
 app.UseCors("ClientPermission");
 
 app.UseDeveloperExceptionPage();
-
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-app.MapGet("test", () => Results.Ok()).RequireAuthorization("AdminPolicy");
+/*
+app.MapGet("test", () => Results.Ok()).RequirePermissions(Permission.Read);
+app.MapPost("test", () => Results.Ok()).RequirePermissions(Permission.Create);
+*/
 
 app.UseHttpsRedirection();
 

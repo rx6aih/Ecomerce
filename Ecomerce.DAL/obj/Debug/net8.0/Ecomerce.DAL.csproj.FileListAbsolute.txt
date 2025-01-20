@@ -12,3 +12,4 @@
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.pdb
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.genruntimeconfig.cache
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/ref/Ecomerce.DAL.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.DAL/obj/Debug/net8.0/Ecomerce.DAL.sourcelink.json

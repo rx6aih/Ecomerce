@@ -14,7 +14,7 @@ public static class Extensions
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
         services.AddDbContext<AppDbContext>(x =>
-            x.UseNpgsql("Server=postgres;Port=5432;Database=EcomerceTest;User Id=postgres;Password=postgres"
+            x.UseNpgsql("Server=localhost;Port=5435;Database=EcomerceTest;User Id=postgres;Password=postgres"
         ));
         return services;
     }

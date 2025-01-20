@@ -18,7 +18,21 @@ public class User(UserService userService) : ControllerBase
     public async Task<IActionResult> Login(UserLoginDto userLoginDto)
     {
         var token = await userService.Login(userLoginDto.Email, userLoginDto.Password);
-        HttpContext.Response.Cookies.Append("token", token);
+        var cookieOptions = new CookieOptions
+        {
+            HttpOnly = true,
+            SameSite = SameSiteMode.None,
+            Secure = false,
+            Expires = DateTime.Now.AddMinutes(1), 
+            IsEssential = true
+        };
+        HttpContext.Response.Cookies.Append("token", token,new CookieOptions() { SameSite = SameSiteMode.Lax });
         return Ok(token);
+    }
+
+    [HttpGet("All")]
+    public async Task<IActionResult> GetAll()
+    {
+        return Ok(await userService.GetAllUsers());
     }
 }

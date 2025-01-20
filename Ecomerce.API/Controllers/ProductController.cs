@@ -10,7 +10,6 @@ namespace Ecomerce.API.Controllers;
 [Route("product")]
 public class ProductController(IService<Product, ProductSaleDto> productService, IRepository<Category> categories, IRepository<Ecomerce.DAL.Entities.Type> types): ControllerBase
 {
-    [Authorize]
     [HttpGet("all")]
     public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken = default)
     {

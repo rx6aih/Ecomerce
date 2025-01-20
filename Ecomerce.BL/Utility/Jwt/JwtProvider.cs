@@ -15,7 +15,6 @@ public class JwtProvider(IOptions<JwtOptions> options)
     {
         Claim[] claims = [
             new("userId", user.Id.ToString()),
-            new("Admin", "true")
         ];
         var signingCredentials = new SigningCredentials(
             new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SecretKey)),SecurityAlgorithms.HmacSha256);

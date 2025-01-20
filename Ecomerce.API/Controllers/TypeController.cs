@@ -1,6 +1,8 @@
+using Ecomerce.API.Extensions;
 using Ecomerce.BL.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Ecomerce.DAL.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Type = Ecomerce.DAL.Entities.Type;
 
 namespace Ecomerce.API.Controllers;
@@ -16,7 +18,7 @@ public class TypeController(IService<DAL.Entities.Type,DAL.Entities.Type> typeSe
         await typeService.AddAsync(type);
         return NoContent();
     }
-
+    [Authorize(Policy="Admin")]
     [HttpGet]
     public async Task<IActionResult> GetAllTypes()
     {

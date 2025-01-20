@@ -2,8 +2,10 @@ using AutoMapper;
 using Ecomerce.BL.Utility;
 using Ecomerce.BL.Utility.Jwt;
 using Ecomerce.DAL.Entities;
+using Ecomerce.DAL.Enums;
 using Ecomerce.DAL.Interfaces;
 using Ecomerce.DAL.Repositories;
+using Permission = Ecomerce.DAL.Enums.Permission;
 
 namespace Ecomerce.BL.Implementations;
 
@@ -17,7 +19,7 @@ public class UserService(
         
         var user = new User(userName, email, hashedPassword);
 
-        await userRepository.CreateAsync(user);
+        await userRepository.Add(user);
     }
 
     public async Task<string> Login(string email, string password)
@@ -31,4 +33,14 @@ public class UserService(
         
         return token;
     }
+
+    public async Task<List<User>> GetAllUsers()
+    {
+        return await userRepository.GetAllUsers();
+    }
+
+    public Task<HashSet<Permission>> GetPermissions(int userId)
+    {
+        return userRepository.GetPermissions(userId);
+    }    
 }

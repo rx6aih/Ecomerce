@@ -63,3 +63,4 @@
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.API/obj/Debug/net8.0/Ecomerce.API.sourcelink.json

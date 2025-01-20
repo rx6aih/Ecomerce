@@ -15,3 +15,4 @@
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.BL/obj/Debug/net8.0/ref/Ecomerce.BL.dll
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.BL/bin/Debug/net8.0/Ecomerce.DTO.dll
 /home/shmi/RiderProjects/Ecomerce/Ecomerce.BL/bin/Debug/net8.0/Ecomerce.DTO.pdb
+/home/shmi/RiderProjects/Ecomerce/Ecomerce.BL/obj/Debug/net8.0/Ecomerce.BL.sourcelink.json
